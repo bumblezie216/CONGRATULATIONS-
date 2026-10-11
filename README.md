@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -29,6 +30,7 @@ button{font:inherit;font-size:17px;color:#3b2f6e;background:var(--pink);border:0
 .chip[aria-pressed=true]{color:#3b2f6e;background:var(--pink)}
 button:focus-visible,input:focus-visible{outline:3px solid var(--white);outline-offset:3px}
 input[type=range]{width:110px;accent-color:var(--rose)}
+.help{font-size:13px;text-align:center;text-shadow:0 1px 8px rgba(5,1,19,.9)}.help summary{cursor:pointer;opacity:.85}.help p{margin:6px 16px}.help audio{width:230px;max-width:80vw}
 #msg{margin:0;min-height:1.2em;font-size:13px;text-align:center;padding:0 16px;text-shadow:0 1px 8px rgba(5,1,19,.9)}
 .lamp{animation:flick 6s ease-in-out infinite alternate}.l2{animation-delay:-3s}
 .tw{animation:tw 5s ease-in-out infinite alternate}.tw.b{animation-delay:-2.5s}
@@ -98,17 +100,17 @@ input[type=range]{width:110px;accent-color:var(--rose)}
 <filter id="wc" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/><feGaussianBlur in="d" stdDeviation=".6" result="b"/><feColorMatrix in="b" type="saturate" values=".8"/></filter>
 <filter id="neon" x="-20%" y="-10%" width="140%" height="120%"><feColorMatrix type="saturate" values="1.6" result="s"/><feGaussianBlur in="s" stdDeviation="5" result="g1"/><feColorMatrix in="g1" type="matrix" values="1.4 0 .3 0 0 0 .5 .6 0 0 .6 0 1.4 0 0 0 0 0 1.6 0" result="g2"/><feMerge><feMergeNode in="g2"/><feMergeNode in="s"/></feMerge></filter>
 <filter id="ink" x="-5%" y="-5%" width="110%" height="110%"><feMorphology in="SourceAlpha" operator="dilate" radius="1.6" result="d"/><feFlood flood-color="#1a1226"/><feComposite in2="d" operator="in" result="o"/><feComponentTransfer in="SourceGraphic" result="p"><feFuncR type="discrete" tableValues="0 .3 .55 .8 1"/><feFuncG type="discrete" tableValues="0 .3 .55 .8 1"/><feFuncB type="discrete" tableValues="0 .3 .55 .8 1"/></feComponentTransfer><feMerge><feMergeNode in="o"/><feMergeNode in="p"/></feMerge></filter>
-<linearGradient id="vol" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".34"/><stop offset=".38" stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#000" stop-opacity=".32"/></linearGradient><radialGradient id="sheen" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<linearGradient id="shade3d" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".34"/><stop offset=".38" stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#000" stop-opacity=".32"/></linearGradient><radialGradient id="sheen" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
 </defs><g id="fx" filter="url(#neon)"><g class="move">
 <ellipse cx="180" cy="478" rx="115" ry="11" fill="#ee8fb3" opacity=".22"/>
 <g class="couple">
 <!-- Damien (left) -->
 <g class="hair-d"><path d="M106 242C102 206 126 200 142 200C158 200 178 208 174 245C182 290 174 330 184 372C160 386 126 376 110 362C100 330 108 290 104 240Z" fill="#14121a"/></g>
-<rect x="126" y="376" width="22" height="86" rx="8" fill="#1c1b24"/><rect x="146" y="376" width="22" height="86" rx="8" fill="#1c1b24"/><rect x="126" y="376" width="22" height="86" rx="8" fill="url(#vol)"/><rect x="146" y="376" width="22" height="86" rx="8" fill="url(#vol)"/>
+<rect x="126" y="376" width="22" height="86" rx="8" fill="#1c1b24"/><rect x="146" y="376" width="22" height="86" rx="8" fill="#1c1b24"/><rect x="126" y="376" width="22" height="86" rx="8" fill="url(#shade3d)"/><rect x="146" y="376" width="22" height="86" rx="8" fill="url(#shade3d)"/>
 <path d="M137 384V458M157 384V458" stroke="#34323f" stroke-width="1.5"/>
 <rect x="122" y="459" width="36" height="15" rx="7" fill="#0f0e14"/><rect x="146" y="459" width="38" height="15" rx="7" fill="#0f0e14"/>
 <path d="M130 463H150M154 463H174" stroke="#4a4858" stroke-width="2" stroke-linecap="round"/>
-<rect x="122" y="292" width="48" height="90" rx="17" fill="#22202b"/><path d="M137 294L155 294L146 340Z" fill="#fff8fb"/><path d="M135 293L143 304L136 312ZM157 293L149 304L156 312Z" fill="#fff8fb"/><path d="M142 303H150L149 309H143Z" fill="#a8142c"/><path d="M143 309H149L152 342L146 352L140 342Z" fill="#d61f3a"/><path d="M137 294L127 332M155 294L165 332" stroke="#3d3a4c" stroke-width="2.2" stroke-linecap="round" fill="none"/><circle cx="146" cy="364" r="2" fill="#4a4858"/><circle cx="146" cy="374" r="2" fill="#4a4858"/><rect x="122" y="292" width="48" height="90" rx="17" fill="url(#vol)"/>
+<rect x="122" y="292" width="48" height="90" rx="17" fill="#22202b"/><path d="M137 294L155 294L146 340Z" fill="#fff8fb"/><path d="M135 293L143 304L136 312ZM157 293L149 304L156 312Z" fill="#fff8fb"/><path d="M142 303H150L149 309H143Z" fill="#a8142c"/><path d="M143 309H149L152 342L146 352L140 342Z" fill="#d61f3a"/><path d="M137 294L127 332M155 294L165 332" stroke="#3d3a4c" stroke-width="2.2" stroke-linecap="round" fill="none"/><circle cx="146" cy="364" r="2" fill="#4a4858"/><circle cx="146" cy="374" r="2" fill="#4a4858"/><rect x="122" y="292" width="48" height="90" rx="17" fill="url(#shade3d)"/>
 <g class="touchD"><rect x="132" y="268" width="15" height="28" fill="#f2c9aa"/>
 <circle cx="140" cy="246" r="32" fill="#f2c9aa"/><circle cx="140" cy="246" r="32" fill="url(#sheen)"/>
 <path d="M106 246C104 214 124 205 142 205C160 205 178 214 174 246C170 240 166 238 162 240L158 232L150 240L144 230L136 240L128 230L122 240L116 232L110 242Z" fill="#14121a"/>
@@ -126,10 +128,10 @@ input[type=range]{width:110px;accent-color:var(--rose)}
 <rect x="192" y="420" width="10" height="34" fill="#f6d3bd"/><rect x="210" y="420" width="10" height="34" fill="#f6d3bd"/>
 <path d="M176 474Q186 466 194 460L204 452L210 456L208 476L204 476L203 464Q190 470 182 474Z" fill="#8f1226"/>
 <path d="M194 474Q204 466 212 460L222 452L228 456L226 476L222 476L221 464Q208 470 200 474Z" fill="#8f1226"/>
-<rect x="180" y="298" width="44" height="66" rx="14" fill="#d61f3a"/><rect x="180" y="298" width="44" height="66" rx="14" fill="url(#vol)"/>
+<rect x="180" y="298" width="44" height="66" rx="14" fill="#d61f3a"/><rect x="180" y="298" width="44" height="66" rx="14" fill="url(#shade3d)"/>
 <path class="nk" d="M190 298Q202 314 214 298Z" fill="#f6d3bd"/><g class="dressB"><path d="M202 298V362" stroke="#a8142c" stroke-width="2"/><circle cx="202" cy="304" r="2" fill="#a8142c"/></g>
 <path d="M186 300V292M218 300V292" stroke="#d61f3a" stroke-width="4" stroke-linecap="round"/>
-<g class="flare"><g class="skirt"><path d="M180 350H224L248 426H156Z" fill="#d61f3a"/><path d="M180 350H224L248 426H156Z" fill="url(#vol)"/><path d="M190 352L176 426M202 352V426M214 352L228 426" stroke="#a8142c" stroke-width="2" opacity=".7"/></g></g>
+<g class="flare"><g class="skirt"><path d="M180 350H224L248 426H156Z" fill="#d61f3a"/><path d="M180 350H224L248 426H156Z" fill="url(#shade3d)"/><path d="M190 352L176 426M202 352V426M214 352L228 426" stroke="#a8142c" stroke-width="2" opacity=".7"/></g></g>
 <rect x="198" y="280" width="14" height="22" fill="#f6d3bd"/>
 <g class="touchL"><g class="head-l">
 <circle cx="206" cy="254" r="30" fill="#f6d3bd"/><circle cx="206" cy="254" r="30" fill="url(#sheen)"/>
@@ -153,8 +155,8 @@ input[type=range]{width:110px;accent-color:var(--rose)}
 <div class="row"><button id="play" type="button">Play</button>
 <input id="vol" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume"></div>
 <p id="msg" role="status"></p>
+<details class="help"><summary>No sound? Tap here</summary><p>Turn off silent mode, turn your volume up, then press play on this player.</p><audio id="song" controls loop preload="none" playsinline></audio></details>
 </div>
-<audio id="song" loop preload="none" playsinline></audio>
 <script>(function(){
 var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 var cb=document.getElementById('back'),cf=document.getElementById('front');
@@ -168,7 +170,7 @@ function make(){var n=0.08+Math.random()*0.92;return{x:Math.random()*(W+160)-40,
 for(var i=0;i<N;i++)drops.push(make());
 var last=performance.now();
 function frame(t){
-var dt=Math.min((t-last)/1000,.05);last=t;
+var dt=Math.max(0,Math.min((t-last)/1000,.05));last=t;
 xb.clearRect(0,0,W,H);xf.clearRect(0,0,W,H);
 for(var i=0;i<drops.length;i++){
 var d=drops[i],n=d.n,sp=420+n*1000,len=7+n*38,c=n<0.5?xb:xf;
@@ -201,12 +203,16 @@ if(buf){go();return}
 say('Loading the song...');
 var ok=function(bb){buf=bb;go()},bad=function(){say("Couldn't load the song.")};
 var p=ac.decodeAudioData(bytes().buffer,ok,bad);if(p&&p.catch)p.catch(bad)}
+function useBlob(){try{if(!blobUrl){blobUrl=URL.createObjectURL(new Blob([bytes()],{type:'audio/mpeg'}))}a.src=blobUrl;var q=a.play();if(q&&q.then)q.then(function(){mode='el';setState(true);say('Playing (backup player).',6000)}).catch(startWA);else{mode='el';setState(true)}}catch(e){startWA()}}
 function startEl(){
-try{if(!blobUrl){blobUrl=URL.createObjectURL(new Blob([bytes()],{type:'audio/mpeg'}));a.src=blobUrl}}catch(e){startWA();return}
+if(!a.getAttribute('src'))a.src='data:audio/mpeg;base64,'+B64;
 a.volume=+v.value;
 var p=a.play();
-if(p&&p.then)p.then(function(){mode='el';setState(true);say('Playing. No sound? Turn your volume up.',7000)}).catch(startWA);
+if(p&&p.then)p.then(function(){mode='el';setState(true);say('Playing. No sound? Turn off silent mode and turn your volume up.',8000)}).catch(useBlob);
 else{mode='el';setState(true)}}
+addEventListener('load',function(){if(!a.getAttribute('src'))a.src='data:audio/mpeg;base64,'+B64});
+a.addEventListener('play',function(){if(mode!=='wa'){mode='el';setState(true)}});
+a.addEventListener('pause',function(){if(mode==='el')setState(false)});
 b.addEventListener('click',function(){
 if(playing){if(mode==='el')a.pause();else if(ac)ac.suspend();setState(false);return}
 ensureAC();
